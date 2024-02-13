@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <nav class="m-1">
+        <img src="img/Logo (1).png" alt="logo">
+    </nav>
+
+    <section>
+        <div class="row m-3">
+            <div class="col-7 col-sm-1">
+                <textarea name="text" class="text-area" id="text" cols="30" rows="10" placeholder="Inserte el texto" autofocus></textarea>
+                <p class="error m-1" id="error"><img src="img/bi_exclamation-circle-fill.png" alt="icono">Solo letras minusculas y sin acento</p>
+                <div class="row m-1">
+                    <div class="col-5 col-sm-2 m-1">
+                        <button class="btn btn-primary btn-info" onclick="encriptar()">Encriptar</button>
+                    </div>
+                    <div class="col-5 col-sm-2 m-1">
+                        <button class="btn" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col-sm-2 m-1 card card2">
+            <img src="img/Muñeco (1).png" class="imagen image" alt="muñeco" id="imagen">
+            
+            <section class="row left m-4" id="resultado">
+                <h1 class="center">Ningun mensaje fue encontrado</h1>
+                <p class="center">Ingrese el texto que desees encriptar o desencriptar</p>
+            </section>
+
+            <div class="col-12">
+                <button id="copiar" class="btn-info copiar" hidden onclick="copiarResultado()">Copiar</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
